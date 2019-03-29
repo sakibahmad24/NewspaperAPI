@@ -164,36 +164,11 @@
 	
 		<!-- Header -->
 		<header id="header">
-			<!-- Top Header -->
-			<div id="top-header">
-				<!-- <div class="container">
-					<div class="header-links">
-						<ul>
-							<li><a href="#">About us</a></li>
-							<li><a href="#">Contact</a></li>
-							<li><a href="#">Advertisement</a></li>
-							<li><a href="#">Privacy</a></li>
-							<li><a href="#"><i class="fa fa-sign-in"></i> Login</a></li>
-						</ul>
-					</div> -->
-					<!-- <div class="header-social">
-						<ul>
-							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-							<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-							<li><a href="#"><i class="fa fa-instagram"></i></a></li>
-							<li><a href="#"><i class="fa fa-youtube"></i></a></li>
-						</ul>
-					</div> -->
-				</div>
-			</div>
-			<!-- /Top Header -->
-			
 			<!-- Center Header -->
 			<div id="center-header">
 				<div class="container">
 					<div class="header-logo">
-						<a href="#" class="logo"><img src="./img/logo.png" alt=""></a>
+						<a href="#" class="logo"><img src="./img/newLogo.png" alt=""></a>
 					</div>
 					<!-- <div class="header-ads">
 						<img class="center-block" src="./img/ad-2.jpg" alt=""> 
@@ -215,10 +190,10 @@
 							<li><a href="#politics">Politics</a></li>
 							<li><a href="#world">World News</a></li>
 							<li><a href="#technology">Technology</a></li>
-							<li><a href="#">Sports</a></li>
+							<li><a href="#sport">Sports</a></li>
 						</ul>
 					</nav>
-					<div class="button-nav">
+					<!-- <div class="button-nav">
 						<button class="search-collapse-btn"><i class="fa fa-search"></i></button>
 						<button class="nav-collapse-btn"><i class="fa fa-bars"></i></button>
 						<div class="search-form">
@@ -226,7 +201,7 @@
 								<input class="input" type="text" name="search" placeholder="Search">
 							</form>
 						</div>
-					</div>
+					</div> -->
 				</div>
 			</div>
 			<!-- /Nav Header -->
@@ -241,7 +216,7 @@
 			?>
 			<article class="article thumb-article">
 				<div class="article-img">
-					<img src="./img/img-lg-1.jpg" alt="">
+					<img src="./img/news.jpg" alt="">
 				</div>
 				<div class="article-body">
 					<ul class="article-info">
@@ -271,16 +246,6 @@
 						<!-- section title -->
 						<div class="section-title">
 							<h2 class="title">Trending Posts</h2>
-							<!-- tab nav -->
-							<!-- <ul class="tab-nav pull-right">
-								<li class="active"><a data-toggle="tab" href="#tab1">All</a></li>
-								<li><a data-toggle="tab" href="#tab1">US-News</a></li>
-								<li><a data-toggle="tab" href="#tab1">Politics</a></li>
-								<li><a data-toggle="tab" href="#tab1">World News</a></li>
-								<li><a data-toggle="tab" href="#tab1">Business</a></li>
-								<li><a data-toggle="tab" href="#tab1">Life Style</a></li>
-							</ul> -->
-							<!-- /tab nav -->
 						</div>
 						<!-- /section title -->
 						
@@ -298,7 +263,7 @@
 										<article class="article widget-article">
 											<div class="article-img">
 												<a href="#">
-													<img src="./img/img-widget-1.jpg" alt="">
+													<img src="./img/trend.jpg" alt="">
 												</a>
 											</div>
 											<div class="article-body">
@@ -353,7 +318,7 @@
 								<article class="article widget-article">
 									<div class="article-img">
 										<a href="#">
-											<img src="./img/img-widget-7.jpg" alt="">
+											<img src="./img/bangladeshi.jpg" alt="">
 										</a>
 									</div>
 									<div class="article-body">
@@ -386,7 +351,7 @@
 								<article class="article widget-article">
 									<div class="article-img">
 										<a href="#">
-											<img src="./img/img-widget-7.jpg" alt="">
+											<img src="./img/politics.jpeg" alt="">
 										</a>
 									</div>
 									<div class="article-body">
@@ -431,7 +396,7 @@
 						<article class="article row-article">
 							<div class="article-img">
 								<a href="#">
-									<img src="./img/img-md-1.jpg" alt="">
+									<img src="./img/world.jpg" alt="">
 								</a>
 							</div>
 							<div class="article-body">
@@ -499,11 +464,11 @@
 	<?php foreach ($techData->response->results as $key => $techValue){ ?>
 							<article class="article thumb-article">
 								<div class="article-img">
-									<img src="./img/img-thumb-1.jpg" alt="">
+									<img src="./img/tech.jpg" alt="">
 								</div>
 								<div class="article-body">
 									<ul class="article-info">
-										<li class="article-category"><a href=""><?php echo $techValue->sectionName; ?></a></li>
+										<li class="article-category"><a href="#0"><?php echo $techValue->sectionName; ?></a></li>
 										<li class="article-type"><i class="fa fa-file-text"></i></li>
 									</ul>
 									<h3 class="article-title"><a href="<?php echo $techValue->webUrl; ?>"><?php echo $techValue->webTitle ?></a></h3>
@@ -536,7 +501,7 @@
 					<div class="col-md-12">
 						<!-- section title -->
 						<div class="section-title">
-							<h2 class="title">Sports News</h2>
+							<h2 class="title" id="sport">Sports News</h2>
 						</div>
 						<!-- /section title -->
 						<div class="col-md-4">
@@ -549,16 +514,16 @@
 								<?php foreach ($sportData->response->results as $key => $sportValue){ ?>
 								<article class="article thumb-article">
 									<div class="article-img">
-										<img src="./img/img-thumb-1.jpg" alt="">
+										<img src="./img/sports.jpeg" alt="">
 									</div>
 									<div class="article-body">
 										<ul class="article-info">
-											<li class="article-category"><a href=""><?php echo $sportValue->sectionName ?></a></li>
-											<li class="article-type"><i class="fa fa-news"></i></li>
+											<li class="article-category"><a href="#0"><?php echo $sportValue->sectionName ?></a></li>
+											<li class="article-type"><i class="fa fa-file-text"></i></li>
 										</ul>
 										<h3 class="article-title"><a href="<? echo $sportValue->webUrl; ?>"> <?php echo $sportValue->webTitle; ?></a></h3>
 										<ul class="article-meta">
-											<li><i class="fa fa-clock-o"></i> January 31, 2017</li>
+											<li><i class="fa fa-clock-o"></i><?php $dateResponse6 = $techValue->webPublicationDate; $dr6 = new DateTime($dateResponse6); echo $dr6->format('m/d/Y'); ?></li>
 											
 										</ul>
 									</div>
@@ -594,12 +559,12 @@
 					<div class="row">
 						<!-- footer links -->
 						<div class="col-md-6 col-md-push-6">
-							<ul class="footer-links">
+							<!-- <ul class="footer-links">
 								<li><a href="#">About us</a></li>
 								<li><a href="#">Contact</a></li>
 								<li><a href="#">Advertisement</a></li>
 								<li><a href="#">Privacy</a></li>
-							</ul>
+							</ul> -->
 						</div>
 						<!-- /footer links -->
 						
