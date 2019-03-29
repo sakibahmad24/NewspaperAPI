@@ -86,12 +86,12 @@
 
 	////////////////////////API call for technology News starts///////////////////////
 
-	$techdUrl="https://content.guardianapis.com/search?q=technology&format=$format&api-key=4c9ce24c-afaf-4769-9c27-1ee87e40c9cf";
+	$techUrl="https://content.guardianapis.com/search?q=technology&format=$format&api-key=4c9ce24c-afaf-4769-9c27-1ee87e40c9cf";
 
 	$techch = curl_init();
 
 
-	curl_setopt($techch, CURLOPT_URL, $techdUrl); 
+	curl_setopt($techch, CURLOPT_URL, $techUrl); 
 
 	curl_setopt($techch, CURLOPT_RETURNTRANSFER, 1);
 	curl_setopt($techch, CURLOPT_TIMEOUT, 3);
@@ -103,6 +103,23 @@
 
 	////////////////////////API call for technology News ends///////////////////////
 
+	////////////////////////API call for sports News starts///////////////////////
+	$sportUrl="https://content.guardianapis.com/search?q=sports&format=$format&api-key=4c9ce24c-afaf-4769-9c27-1ee87e40c9cf";
+
+	$sportch = curl_init();
+
+
+	curl_setopt($sportch, CURLOPT_URL, $sportUrl); 
+
+	curl_setopt($sportch, CURLOPT_RETURNTRANSFER, 1);
+	curl_setopt($sportch, CURLOPT_TIMEOUT, 3);
+	$sportContent = trim(curl_exec($sportch));
+	curl_close($sportch);
+
+	//echo "<pre>";
+	$sportData = json_decode($sportContent);
+
+	////////////////////////API call for technology News starts///////////////////////
 
 ?>
 
@@ -516,170 +533,45 @@
 				<!-- ROW -->
 				<div class="row">
 					<!-- Main Column -->
-					<div class="col-md-8">
+					<div class="col-md-12">
 						<!-- section title -->
 						<div class="section-title">
-							<h2 class="title">Popular Posts</h2>
+							<h2 class="title">Sports News</h2>
 						</div>
 						<!-- /section title -->
-						
-						<!-- ARTICLE -->
-						<article class="article row-article">
-							<div class="article-img">
-								<a href="#">
-									<img src="./img/img-md-1.jpg" alt="">
-								</a>
-							</div>
-							<div class="article-body">
-								<ul class="article-info">
-									<li class="article-category"><a href="#">News</a></li>
-									<li class="article-type"><i class="fa fa-file-text"></i></li>
-								</ul>
-								<h3 class="article-title"><a href="#">Duis urbanitas eam in, tempor consequat.</a></h3>
-								<ul class="article-meta">
-									<li><i class="fa fa-clock-o"></i> January 31, 2017</li>
-									<li><i class="fa fa-comments"></i> 33</li>
-								</ul>
-								<p>Populo tritani laboramus ex mei, no eum iuvaret ceteros euripidis, ne alia sadipscing mei. Te inciderint cotidieque pro, ei iisque docendi qui.</p>
-							</div>
-						</article>
-						<!-- /ARTICLE -->
-						
-						<!-- ARTICLE -->
-						<article class="article row-article">
-							<div class="article-img">
-								<a href="#">
-									<img src="./img/img-md-2.jpg" alt="">
-								</a>
-							</div>
-							<div class="article-body">
-								<ul class="article-info">
-									<li class="article-category"><a href="#">News</a></li>
-									<li class="article-type"><i class="fa fa-file-text"></i></li>
-								</ul>
-								<h3 class="article-title"><a href="#">Duis urbanitas eam in, tempor consequat.</a></h3>
-								<ul class="article-meta">
-									<li><i class="fa fa-clock-o"></i> January 31, 2017</li>
-									<li><i class="fa fa-comments"></i> 33</li>
-								</ul>
-								<p>Populo tritani laboramus ex mei, no eum iuvaret ceteros euripidis, ne alia sadipscing mei. Te inciderint cotidieque pro, ei iisque docendi qui.</p>
-							</div>
-						</article>
-						<!-- /ARTICLE -->
-						
-						<!-- ARTICLE -->
-						<article class="article row-article">
-							<div class="article-img">
-								<a href="#">
-									<img src="./img/img-md-3.jpg" alt="">
-								</a>
-							</div>
-							<div class="article-body">
-								<ul class="article-info">
-									<li class="article-category"><a href="#">News</a></li>
-									<li class="article-type"><i class="fa fa-file-text"></i></li>
-								</ul>
-								<h3 class="article-title"><a href="#">Duis urbanitas eam in, tempor consequat.</a></h3>
-								<ul class="article-meta">
-									<li><i class="fa fa-clock-o"></i> January 31, 2017</li>
-									<li><i class="fa fa-comments"></i> 33</li>
-								</ul>
-								<p>Populo tritani laboramus ex mei, no eum iuvaret ceteros euripidis, ne alia sadipscing mei. Te inciderint cotidieque pro, ei iisque docendi qui.</p>
-							</div>
-						</article>
-						<!-- /ARTICLE -->
-						
-						<!-- ARTICLE -->
-						<article class="article row-article">
-							<div class="article-img">
-								<a href="#">
-									<img src="./img/img-md-4.jpg" alt="">
-								</a>
-							</div>
-							<div class="article-body">
-								<ul class="article-info">
-									<li class="article-category"><a href="#">News</a></li>
-									<li class="article-type"><i class="fa fa-file-text"></i></li>
-								</ul>
-								<h3 class="article-title"><a href="#">Duis urbanitas eam in, tempor consequat.</a></h3>
-								<ul class="article-meta">
-									<li><i class="fa fa-clock-o"></i> January 31, 2017</li>
-									<li><i class="fa fa-comments"></i> 33</li>
-								</ul>
-								<p>Populo tritani laboramus ex mei, no eum iuvaret ceteros euripidis, ne alia sadipscing mei. Te inciderint cotidieque pro, ei iisque docendi qui.</p>
-							</div>
-						</article>
-						<!-- /ARTICLE -->
-						
-						<!-- pagination -->
-						<div class="article-pagination">
-							<ul> 
-								<li class="active"><a href="#" class="active">1</a></li>
-								<li><a href="#">2</a></li>
-								<li><a href="#">3</a></li>
-								<li><a href="#"><i class="fa fa-angle-right"></i></a></li>
-							</ul>
-						</div>
-						<!-- /pagination -->
-					</div>
-					<!-- /Main Column -->
-					
-					<!-- Aside Column -->
-					<div class="col-md-4">
+						<div class="col-md-4">
 						<!-- article widget -->
-						<div class="widget">
-							<div class="widget-title">
-								<h2 class="title">Featured Posts</h2>
-							</div>
+						
 							
 							<!-- owl carousel 4 -->
 							<div id="owl-carousel-4" class="owl-carousel owl-theme">
 								<!-- ARTICLE -->
+								<?php foreach ($sportData->response->results as $key => $sportValue){ ?>
 								<article class="article thumb-article">
 									<div class="article-img">
 										<img src="./img/img-thumb-1.jpg" alt="">
 									</div>
 									<div class="article-body">
 										<ul class="article-info">
-											<li class="article-category"><a href="#">News</a></li>
-											<li class="article-type"><i class="fa fa-video-camera"></i></li>
+											<li class="article-category"><a href=""><?php echo $sportValue->sectionName ?></a></li>
+											<li class="article-type"><i class="fa fa-news"></i></li>
 										</ul>
-										<h3 class="article-title"><a href="#">Duis urbanitas eam in, tempor consequat.</a></h3>
+										<h3 class="article-title"><a href="<? echo $sportValue->webUrl; ?>"> <?php echo $sportValue->webTitle; ?></a></h3>
 										<ul class="article-meta">
 											<li><i class="fa fa-clock-o"></i> January 31, 2017</li>
-											<li><i class="fa fa-comments"></i> 33</li>
+											
 										</ul>
 									</div>
 								</article>
-								<!-- /ARTICLE -->
-							
-								<!-- ARTICLE -->
-								<article class="article thumb-article">
-									<div class="article-img">
-										<img src="./img/img-thumb-2.jpg" alt="">
-									</div>
-									<div class="article-body">
-										<ul class="article-info">
-											<li class="article-category"><a href="#">News</a></li>
-											<li class="article-type"><i class="fa fa-video-camera"></i></li>
-										</ul>
-										<h3 class="article-title"><a href="#">Duis urbanitas eam in, tempor consequat.</a></h3>
-										<ul class="article-meta">
-											<li><i class="fa fa-clock-o"></i> January 31, 2017</li>
-											<li><i class="fa fa-comments"></i> 33</li>
-										</ul>
-									</div>
-								</article>
-								<!-- /ARTICLE -->
-							</div>
-							<!-- /owl carousel 4 -->
-						</div>
-						<!-- /article widget -->
+
+							<?php } ?>
+						<!-- ARTICLE -->
 						
-						<!-- galery widget -->
-						
-						<!-- /tweets widget -->
 					</div>
+					<!-- /Main Column -->
+					
+					<!-- Aside Column -->
+					
 					<!-- /Aside Column -->
 				</div>
 				<!-- /ROW -->
